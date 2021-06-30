@@ -38,6 +38,22 @@ ul {
     overflow-y: scroll;
 }
 
+.green-chat,
+.white-chat {
+    width: 100%;
+}
+
+.white-chat .message {
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.green-chat .message {
+    background-color: #056162;
+    border-radius: 10px;
+    color: #fff;
+}
+
 .chat-input {
     height: 80px;
 }
