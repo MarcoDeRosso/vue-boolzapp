@@ -2,14 +2,6 @@ main {
     background-image: linear-gradient(to bottom, #429488 20%, #dadbd5 20% 80%);
 }
 
-.vh {
-    height: 100vh;
-}
-
-.max-height {
-    max-height: 100%;
-}
-
 .white {
     background-color: #fafafa;
 }
@@ -106,8 +98,10 @@ ul {
 }
 
 .contacts-list {
-    height: calc(100vh - 262px);
-    overflow: auto;
+    flex-grow: 1;
+    flex-shrink: 1;
+    overflow-y: auto;
+    height: 240px;
 }
 
 .contacts-list li {
