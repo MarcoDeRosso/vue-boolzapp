@@ -62,7 +62,16 @@ ul {
     width: 80%;
 }
 
-.notifiche {}
+.notifiche {
+    background-color: #9fd8f8;
+    height: 100px;
+}
+
+.notifiche .bell-icon-container {
+    background-color: #f4fbfe;
+    border-radius: 50%;
+    color: #9fd8f8;
+}
 
 .search input {
     width: 100%;
