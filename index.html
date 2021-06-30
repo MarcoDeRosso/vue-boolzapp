@@ -16,58 +16,63 @@
     <main>
         <div id="app">
             <div class="container">
-                <div class="head row ">
-                    <div class="col-4 d-flex justify-content-between align-items-center">
-                        <div>
-                            <img class="img-avatar" src="./img/avatar_io.jpg" alt="">
-                            <span>Nome utente</span>
+                <div class=" row ">
+                    <div class="col-5 p-0">
+                        <div class="user-profile-head d-flex justify-content-between align-items-center px-3">
+                            <div class="d-flex align-items-center">
+                                <img class="img-avatar me-2" src="./img/avatar_io.jpg" alt="">
+                                <h6>Nome utente</h6>
+                            </div>
+                            <div>
+                                <i class="fas fa-circle-notch font-grey ms-3"></i>
+                                <i class="fas fa-comment-alt font-grey ms-3"></i>
+                                <i class="fas fa-ellipsis-v font-grey ms-3"></i>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fas fa-circle-notch"></i>
-                            <i class="fas fa-comment-alt"></i>
-                            <i class="fas fa-ellipsis-v"></i>
+                        <div class="notifiche d-flex">
+                            <div>
+                                <i class="fas fa-bell-slash"></i>
+                            </div>
+                            <div>
+                                <h6>Ricevi notifiche di nuovi messaggi</h6>
+                                <a>Attiva notifiche desktop</a>
+                            </div>
                         </div>
+                        <div class="search d-flex">
+                            <div>
+                                <i class="fas fa-search"></i>
+                            </div>
+                            <input placeholder="Cerca o inizia una nuova chat">
+                        </div>
+                        <ul class="">
+                            <li v-for="(contact,index) in contacts">
+                                <img class="img-avatar me-2" :src="imgStamp(contact)" alt="avatar">
+                                <span>{{contact.name}}</span>
+                            </li>
+                        </ul>
                     </div>
-                    <div class="col-8 d-flex justify-content-between align-items-center">
-                        <div>
-                            <img class="img-avatar" src="./img/avatar_1.jpg" alt="">
-                            <span>Nome utente</span>
-                        </div>
-                        <div>
-                            <i class="fas fa-search"></i>
-                            <i class="fas fa-paperclip"></i>
-                            <i class="fas fa-ellipsis-v"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-4">
-                        <div class="row">
-                            <div class="col-12 d-flex">
+                    <div class="col-7 p-0">
+                        <div class="user-chat-head d-flex justify-content-between align-items-center px-3">
+                            <div class="d-flex align-items-center">
+                                <img class="img-avatar me-2" src="./img/avatar_1.jpg" alt="">
                                 <div>
-                                    <i class="fas fa-bell-slash"></i>
-                                </div>
-                                <div>
-                                    <h6>Ricevi notifiche di nuovi messaggi</h6>
-                                    <a>Attiva notifiche desktop</a>
+                                    <h6>Nome utente</h6>
+                                    <span class="font-grey">Ultimo accessio oggi alle</span>
                                 </div>
                             </div>
-                            <div class="col-12 d-flex">
-                                <div>
-                                    <i class="fas fa-search"></i>
-                                </div>
-                                <input placeholder="Cerca o inizia una nuova chat">
+                            <div>
+                                <i class="fas fa-search font-grey ms-3"></i>
+                                <i class="fas fa-paperclip font-grey ms-3"></i>
+                                <i class="fas fa-ellipsis-v font-grey ms-3"></i>
                             </div>
-                            <ul class="col-12">
-                                <li v-for="(contact,index) in contacts">
-                                    <img class="img-avatar" :src="imgStamp(contact)" alt="avatar">
-                                    <span>{{contact.name}}</span>
-                                </li>
-                            </ul>
                         </div>
-                    </div>
-                    <div class="chat col-8">
-
+                        <div class="chat">
+                        </div>
+                        <div class="chat-input d-flex justify-content-around align-items-center">
+                            <i class="far fa-smile"></i>
+                            <input placeholder="Scrivi un messaggio">
+                            <i class="fas fa-microphone"></i>
+                        </div>
                     </div>
                 </div>
             </div>

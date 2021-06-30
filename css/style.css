@@ -6,11 +6,48 @@ ul {
     list-style: none;
 }
 
+.font-grey {
+    color: #b1b1b1;
+}
+
 .img-avatar {
-    width: 100px;
+    width: 75px;
     border-radius: 50%;
+}
+
+.user-chat-head,
+.user-profile-head {
+    height: 120px;
+    background: #eaeaea
+}
+
+.user-chat-head i,
+.user-profile-head i {
+    font-size: 20px;
+    cursor: pointer;
+}
+
+.user-chat-head {
+    border-left: 2px solid #d6d6d6;
 }
 
 .chat {
     background-image: url(../img/mine.jpg);
+    height: calc(100vh - 200px);
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.chat-input {
+    height: 80px;
+}
+
+.chat-input input {
+    width: 80%;
+}
+
+.notifiche {}
+
+.search input {
+    width: 100%;
 }
