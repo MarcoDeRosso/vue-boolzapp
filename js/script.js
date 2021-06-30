@@ -82,11 +82,10 @@ const app = new Vue({
                 ],
             },
         ],
-        imgAvatar: "",
     },
     methods: {
         imgStamp: function(contact) {
-            return this.imgAvatar = "./img/avatar" + contact.avatar + ".jpg";
+            return "./img/avatar" + contact.avatar + ".jpg";
         }
     },
 
