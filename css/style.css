@@ -1,3 +1,16 @@
 main {
     background-image: linear-gradient(to bottom, #429488 20%, #dadbd5 80%);
 }
+
+ul {
+    list-style: none;
+}
+
+.head img {
+    width: 100px;
+    border-radius: 50%;
+}
+
+.chat {
+    background-image: url(../img/mine.jpg);
+}
