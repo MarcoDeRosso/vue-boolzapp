@@ -1,5 +1,5 @@
 main {
-    background-image: linear-gradient(to bottom, #429488 20%, #dadbd5 80%);
+    background-image: linear-gradient(to bottom, #429488 20%, #dadbd5 20% 80%);
 }
 
 ul {
