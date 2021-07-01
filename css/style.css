@@ -42,11 +42,6 @@ ul {
     overflow-y: scroll;
 }
 
-.green-chat,
-.white-chat {
-    width: 100%;
-}
-
 .white-chat .message {
     background-color: #fff;
     border-radius: 10px;

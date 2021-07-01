@@ -86,6 +86,16 @@ const app = new Vue({
     methods: {
         imgStamp: function(contact) {
             return "./img/avatar" + contact.avatar + ".jpg";
+        },
+        sentStatus: function(status) {
+            if (status === "sent") {
+                return true;
+            }
+        },
+        receivedStatus: function(status) {
+            if (status === "received") {
+                return true;
+            }
         }
     },
 

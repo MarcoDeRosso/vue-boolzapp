@@ -67,11 +67,11 @@
                             </div>
                         </div>
                         <div class="chat p-3">
-                            <div class="green-chat d-flex justify-content-end">
-                                <div class="message p-3 ">CIAO</div>
-                            </div>
-                            <div class="white-chat" v-for="(text,index) in contacts[0].messages">
+                            <div class="white-chat d-flex my-3" v-for="(text,index) in contacts[0].messages" v-if="sentStatus(text.status)">
                                 <div class="message p-3 "> {{text.text}}</div>
+                            </div>
+                            <div class="green-chat d-flex justify-content-end my-3" v-for="(text,index) in contacts[0].messages" v-if="receivedStatus(text.status)">
+                                <div class="message p-3 ">{{text.text}}</div>
                             </div>
                         </div>
                         <div class="chat-input d-flex justify-content-around align-items-center">
