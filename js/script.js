@@ -82,6 +82,7 @@ const app = new Vue({
                 ],
             },
         ],
+        user: 0,
     },
     methods: {
         imgStamp: function(contact) {
@@ -96,6 +97,9 @@ const app = new Vue({
             if (status === "received") {
                 return true;
             }
+        },
+        activeUser: function(index) {
+            return this.user = index;
         }
     },
 

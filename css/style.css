@@ -103,6 +103,7 @@ ul {
     border-top: 2px solid #d6d6d6;
     border-right: 2px solid #d6d6d6;
     background: #fff;
+    cursor: pointer;
 }
 
 .contacts-list li:first-child {
