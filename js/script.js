@@ -83,6 +83,10 @@ const app = new Vue({
             },
         ],
         user: 0,
+        newText: {
+            text: "",
+            status: 'received'
+        }
     },
     methods: {
         imgStamp: function(contact) {
@@ -100,6 +104,12 @@ const app = new Vue({
         },
         activeUser: function(index) {
             return this.user = index;
+        },
+        addText: function(index) {
+            if (this.newText.text.trim() !== "") {
+                this.contacts[index].messages.push(this.newText);
+            }
+            this.newText = "";
         }
     },
 

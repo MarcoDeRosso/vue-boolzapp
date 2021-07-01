@@ -76,7 +76,7 @@
                         </div>
                         <div class="chat-input d-flex justify-content-around align-items-center">
                             <i class="far fa-smile ms-3"></i>
-                            <input class="p-2" placeholder="Scrivi un messaggio">
+                            <input v-model="newText.text" class="p-2" placeholder="Scrivi un messaggio" @keyup.enter="addText(user)">
                             <i class="fas fa-microphone me-3"></i>
                         </div>
                     </div>
