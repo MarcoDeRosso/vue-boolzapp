@@ -68,10 +68,10 @@
                         </div>
                         <div class="chat p-3">
                             <div v-for="(text,index) in contacts[user].messages">
-                                <div class="white-chat d-flex my-3" v-if="sentStatus(text.status)">
+                                <div class="white-chat d-flex my-3" v-if="receivedStatus(text.status)">
                                     <div class="message p-3 "> {{text.text}}</div>
                                 </div>
-                                <div class="green-chat d-flex justify-content-end my-3" v-if="receivedStatus(text.status)">
+                                <div class="green-chat d-flex justify-content-end my-3" v-if="sentStatus(text.status)">
                                     <div class="message p-3 ">{{text.text}}</div>
                                 </div>
                             </div>
