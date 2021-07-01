@@ -51,7 +51,7 @@
                             </li>
                         </ul>
                     </div>
-                    <div class="col-7  p-0">
+                    <div class="col-7 d-flex flex-column p-0">
                         <div class="user-chat-head d-flex justify-content-between align-items-center px-3">
                             <div class="d-flex align-items-center">
                                 <img class="img-avatar me-2" src="./img/avatar_1.jpg" alt="">
@@ -60,18 +60,18 @@
                                     <span class="font-grey">Ultimo accessio oggi alle</span>
                                 </div>
                             </div>
-                            <div>
-                                <i class="fas fa-search font-grey ms-3"></i>
-                                <i class="fas fa-paperclip font-grey ms-3"></i>
-                                <i class="fas fa-ellipsis-v font-grey ms-3"></i>
+                            <div class="font-grey">
+                                <i class="fas fa-search ms-3"></i>
+                                <i class="fas fa-paperclip ms-3"></i>
+                                <i class="fas fa-ellipsis-v ms-3"></i>
                             </div>
                         </div>
                         <div class="chat p-3">
                             <div class="green-chat d-flex justify-content-end">
                                 <div class="message p-3 ">CIAO</div>
                             </div>
-                            <div class="white-chat d-flex">
-                                <div class="message p-3 "> CIAO CIAO!</div>
+                            <div class="white-chat" v-for="(text,index) in contacts[0].messages">
+                                <div class="message p-3 "> {{text.text}}</div>
                             </div>
                         </div>
                         <div class="chat-input d-flex justify-content-around align-items-center">
