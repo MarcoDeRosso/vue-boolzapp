@@ -83,9 +83,19 @@ const app = new Vue({
             },
         ],
         user: 0,
-        newText: {}
+        newText: {},
+        filter: "",
+        contactsFiltered: [],
     },
     methods: {
+        contactsFilter: function() {
+            return this.contactsFiltered = this.contacts.filter((contact) => {
+                if (contact.name.toLowerCase().includes(this.filter.toLowerCase())) {
+                    return true;
+                }
+                return false;
+            });
+        },
         imgStamp: function(contact) {
             return "./img/avatar" + contact.avatar + ".jpg";
         },
@@ -102,13 +112,17 @@ const app = new Vue({
         activeUser: function(index) {
             return this.user = index;
         },
+        getCurrentDateTime: function() {
+            const dateTimeNow = dayjs();
+            return dateTimeNow.format("DD/MM/YYYY hh:mm:ss")
+        },
         answerOk: function(index) {
-            let answer = { text: 'Ok', status: 'received' }
+            let answer = { text: 'Ok', status: 'received', date: this.getCurrentDateTime() }
             this.contacts[index].messages.push(answer);
         },
         addText: function(index) {
             if (this.newText.text.trim() !== "") {
-                let newTextObject = {...this.newText, status: 'sent' }
+                let newTextObject = {...this.newText, status: 'sent', date: this.getCurrentDateTime() }
                 this.newText.text = "";
                 this.contacts[index].messages.push(newTextObject);
                 setTimeout(() => {
