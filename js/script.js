@@ -96,6 +96,11 @@ const app = new Vue({
                 return false;
             });
         },
+        visibleStatus: function(visible) {
+            if (visible === true) {
+                return true;
+            }
+        },
         imgStamp: function(contact) {
             return "./img/avatar" + contact.avatar + ".jpg";
         },

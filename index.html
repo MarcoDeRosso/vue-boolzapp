@@ -47,7 +47,7 @@
                             <input placeholder="Cerca o inizia una nuova chat" v-model="filter" @keyup="contactsFilter()">
                         </div>
                         <ul class="contacts-list white p-0 pe-2">
-                            <li v-for="(contact,index) in contacts" @click="activeUser(index)" class="contact px-2 py-3">
+                            <li v-for="(contact,index) in contactsFiltered" @click="activeUser(index)" class="contact px-2 py-3">
                                 <img class="img-avatar me-2" :src="imgStamp(contact)" alt="avatar">
                                 <span>{{contact.name}}</span>
                             </li>
