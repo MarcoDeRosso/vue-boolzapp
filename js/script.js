@@ -85,21 +85,16 @@ const app = new Vue({
         user: 0,
         newText: {},
         filter: "",
-        contactsFiltered: [],
     },
     methods: {
         contactsFilter: function() {
-            return this.contactsFiltered = this.contacts.filter((contact) => {
-                if (contact.name.toLowerCase().includes(this.filter.toLowerCase())) {
-                    return true;
+            this.contacts.forEach(contact => {
+                if (!contact.name.toLowerCase().includes(this.filter.toLowerCase())) {
+                    contact.visible = false;
+                } else {
+                    contact.visible = true;
                 }
-                return false;
-            });
-        },
-        visibleStatus: function(visible) {
-            if (visible === true) {
-                return true;
-            }
+            })
         },
         imgStamp: function(contact) {
             return "./img/avatar" + contact.avatar + ".jpg";
